@@ -37,6 +37,59 @@
         </div>
       </div>
     </main>
+    <div class="modal">
+      <div class="modal-container">
+        <form class="add-book">
+          <div class="modal-header">
+            <h2>Add book</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="close-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <input
+            class="input"
+            type="text"
+            id="title"
+            placeholder="Title"
+            required
+            maxlength="140"
+          />
+          <input
+            class="input"
+            type="text"
+            id="author"
+            placeholder="Author"
+            required
+            maxlength="140"
+          />
+          <input
+            class="input"
+            type="number"
+            id="pages"
+            placeholder="Pages"
+            required
+            maxlength="10000"
+            min="1"
+          />
+          <div class="book-read">
+            <label for="book-read">Have you read it?</label>
+            <input class="checkbox" type="checkbox" id="book-read" />
+          </div>
+          <button class="btn btn-add-new-book" type="submit">Add book</button>
+        </form>
+      </div>
+    </div>
     <footer class="footer">
       <p>Made by Berk Tutu</p>
     </footer>

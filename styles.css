@@ -4,6 +4,7 @@
   --shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
   --white: #fafafa;
   --gray: #e5e7eb;
+  --dark-gray: #9ca3af;
   --black: #171717;
   --red: #dc2626;
   --light-red: #ef4444;
@@ -38,13 +39,14 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   background-color: var(--white);
   box-shadow: var(--shadow);
+  grid-row: 1 / 2;
 }
 
 .header-container {
-  width: var(--width);
+  width: 80%;
   height: 100%;
   display: flex;
   justify-self: center;
@@ -52,12 +54,13 @@ header {
 }
 
 .books-grid {
-  width: var(--width);
+  width: 80vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--spacing-xlarge);
   margin-top: var(--spacing-xlarge);
   justify-self: center;
+  grid-row: 2 / 3;
 }
 
 .book-card {
@@ -68,7 +71,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   background-color: var(--white);
   gap: var(--spacing-large);
   padding: var(--spacing-large);
@@ -100,8 +103,21 @@ header {
   border: none;
   padding: var(--spacing-small) var(--spacing-medium);
   border-radius: 4px;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   cursor: pointer;
+}
+
+.btn-read {
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.btn-read:hover {
+  background-color: var(--light-green);
+}
+
+.btn-remove {
+  background-color: var(--gray);
 }
 
 .btn-add {
@@ -112,9 +128,67 @@ header {
   padding: var(--spacing-medium) var(--spacing-large);
 }
 
+.btn-add:hover {
+  background-color: var(--dark-gray);
+}
+
+.modal {
+  display: none;
+}
+
+.modal-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+  gap: var(--spacing-large);
+  width: 20vw;
+  padding: var(--spacing-large) var(--spacing-xlarge);
+  justify-self: center;
+  align-self: center;
+  font-size: 1.8rem;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.add-book button {
+  font-size: 2.4rem;
+}
+
+input {
+  padding: var(--spacing-small) var(--spacing-medium);
+  border: 2px solid var(--black);
+  font-size: 1.8rem;
+}
+
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.8rem;
+  grid-row: 3 / 5;
 }
