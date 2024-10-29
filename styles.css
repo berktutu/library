@@ -1,0 +1,120 @@
+:root {
+  font-size: 62.5%;
+  --width: 1200px;
+  --shadow: rgba(0, 0, 0, 0.2) 0px 1px 4px;
+  --white: #fafafa;
+  --gray: #e5e7eb;
+  --black: #171717;
+  --red: #dc2626;
+  --light-red: #ef4444;
+  --green: #16a34a;
+  --light-green: #22c55e;
+  --spacing-xsmall: 4px;
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
+  --spacing-xlarge: 40px;
+}
+
+/* CSS GLOBAL RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  font-weight: 500;
+  background-color: var(--gray);
+  color: var(--black);
+  font-family: "Roboto", serif;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 96px 1fr 50px;
+}
+
+header {
+  width: 100%;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.header-container {
+  width: var(--width);
+  height: 100%;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+.books-grid {
+  width: var(--width);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-xlarge);
+  margin-top: var(--spacing-xlarge);
+  justify-self: center;
+}
+
+.book-card {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background-color: var(--white);
+  gap: var(--spacing-large);
+  padding: var(--spacing-large);
+}
+
+.information-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-medium);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: 4px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.btn-add {
+  margin-top: var(--spacing-xlarge);
+  font-size: 2.4rem;
+  background-color: var(--white);
+  font-weight: 700;
+  padding: var(--spacing-medium) var(--spacing-large);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
