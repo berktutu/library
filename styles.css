@@ -171,6 +171,7 @@ header {
   border-radius: 4px;
   gap: var(--spacing-large);
   width: 20vw;
+  min-width: 300px;
   padding: var(--spacing-large) var(--spacing-xlarge);
   justify-self: center;
   align-self: center;
