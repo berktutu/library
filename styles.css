@@ -112,12 +112,21 @@ header {
   background-color: var(--green);
 }
 
+.btn-not-read {
+  color: var(--white);
+  background-color: var(--red);
+}
+
 .btn-read:hover {
-  background-color: var(--light-green);
+  opacity: 0.9;
 }
 
 .btn-remove {
   background-color: var(--gray);
+}
+
+.btn-remove:hover {
+  opacity: 0.9;
 }
 
 .btn-add {
@@ -130,6 +139,11 @@ header {
 
 .btn-add:hover {
   background-color: var(--dark-gray);
+}
+
+.btn-add-new-book {
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .modal {
